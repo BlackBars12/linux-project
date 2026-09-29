@@ -1,12 +1,12 @@
 
-                        
-          _|    _|      
-  _|_|_|      _|_|_|_|  
-_|    _|  _|    _|      
-_|    _|  _|    _|      
-  _|_|_|  _|      _|_|  
-      _|                
-  _|_|                  
+                            
+              _|    _|      
+      _|_|_|      _|_|_|_|  
+    _|    _|  _|    _|      
+    _|    _|  _|    _|      
+      _|_|_|  _|      _|_|  
+          _|                
+      _|_|                  
 
 **Package:** git  
 **Version:** 1:2.47.3-0+deb13u1  
@@ -50,33 +50,33 @@ _|    _|  _|    _|
 
 # Структура пакета
 
-my_data
-├── etc
-│   └── bash_completion.d
-│       └── git-prompt
-├── usr
-│   ├── bin
-│   │   ├── git
-│   │   ├── git-receive-pack -> git
-│   │   ├── git-shell
-│   │   ├── git-upload-archive -> git
-│   │   ├── git-upload-pack -> git
-│   │   └── scalar
-│   ├── lib
-│   │   └── git-core
-│   └── share
-│       ├── bash-completion
-│       ├── doc
-│       ├── git-core
-│       ├── gitweb
-│       ├── lintian
-│       ├── locale
-│       └── perl5
-└── var
-    └── lib
-        └── git
-
-18 directories, 7 files
+    my_data
+    ├── etc
+    │   └── bash_completion.d
+    │       └── git-prompt
+    ├── usr
+    │   ├── bin
+    │   │   ├── git
+    │   │   ├── git-receive-pack -> git
+    │   │   ├── git-shell
+    │   │   ├── git-upload-archive -> git
+    │   │   ├── git-upload-pack -> git
+    │   │   └── scalar
+    │   ├── lib
+    │   │   └── git-core
+    │   └── share
+    │       ├── bash-completion
+    │       ├── doc
+    │       ├── git-core
+    │       ├── gitweb
+    │       ├── lintian
+    │       ├── locale
+    │       └── perl5
+    └── var
+        └── lib
+            └── git
+    
+    18 directories, 7 files
 
 ## Файл Preinst
 

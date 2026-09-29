@@ -12,13 +12,13 @@ dpkg -x $FILE_NAME my_data
 dpkg -e $FILE_NAME my_META
 
 text="
-$(figlet -f block $1)
+$(figlet -f block $1 | sed 's/^/    /')
 
 $(apt show $1 2>/dev/null | sed 's/$/  /' | sed -E 's/(^\b.+?:) /**\1** /g')
 
 # Структура пакета
 
-$(tree -L 3  my_data 2>/dev/null)
+$(tree -L 3  my_data 2>/dev/null | sed 's/^/    /')
 
 ## Файл Preinst
 
@@ -37,9 +37,7 @@ $(sed 's/^/    /' my_META/prerm 2>/dev/null)
 $(sed 's/^/    /' my_META/postrm 2>/dev/null)
 "
 echo "$text">"MARKDOWN.md"
-
-
-
+rm -f "$FILE_NAME"
 rm -rf my_data
 rm -rf my_META
 
