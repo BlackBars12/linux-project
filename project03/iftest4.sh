@@ -33,8 +33,12 @@ cd project_$1
 nano README.md
 cd ..
 
+git init
+git add .
+git commit -a -m "Новый репозиторий"
+
 ssh-keygen -t ed25519 -f "$papkaif/ed25519" -N "" -q
-echo "$papkaif/ed25519" >> ~/.ssh/config
+echo "IdentityFile $papkaif/ed25519" >> ~/.ssh/config
 echo "Ссылка на репозиторий https://github.com/BlackBars12/linux-project/tree/main"
 echo "Ваш публичный ключ"
 cat "$papkaif/ed25519.pub"

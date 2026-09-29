@@ -20,4 +20,7 @@ text="
 __*и скомментировать его в гит*__
 $2"
 echo  "$text" > "${new_folder_name}/README.md"
+git init
+git add .
+git commit -a -m "Новый репозиторий"
 exit 0
