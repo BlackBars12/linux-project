@@ -1,8 +1,5 @@
 echo "Маркдовн отчёт "
 echo "Papka $1"
-new_folder="$HOME/projects/project04/MARKDOWN$1"
-mkdir $new_folder
-cd MARKDOWN$1
 apt download $1
 
 FILE_NAME=$(ls $1*.deb)

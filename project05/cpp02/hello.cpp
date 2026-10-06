@@ -8,18 +8,13 @@ int main (int argc, char* argv[])
 	CLI::App app{"Моё приложение"};
 
 
-	if (argc<4){
-		cout << "Ошибка использовани " << argv[0] << "<max> <min> <количество>" << endl;
-		return 1;
-	}
-
 	int minn;
 	int maxx;
 	int count;
 
-	app.add_option("-n,--min",minn,"min значение");
-	app.add_option("-m,--max",maxx,"max значени");
-	app.add_option("-c,--count",count,"количество");
+	app.add_option("min",minn,"min значение");
+	app.add_option("max",maxx,"max значени");
+	app.add_option("count",count,"количество");
 	CLI11_PARSE(app, argc, argv);
 
 	if (minn > maxx){
