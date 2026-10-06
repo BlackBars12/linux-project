@@ -1,8 +1,8 @@
 echo "Маркдовн отчёт "
-echo "Papka $2"
-new_folder="$HOME/projects/project04/MARKDOWN$2"
+echo "Papka $1"
+new_folder="$HOME/projects/project04/MARKDOWN$1"
 mkdir $new_folder
-cd MARKDOWN$2
+cd MARKDOWN$1
 apt download $1
 
 FILE_NAME=$(ls $1*.deb)
@@ -18,26 +18,26 @@ $(apt show $1 2>/dev/null | sed 's/$/  /' | sed -E 's/(^\b.+?:) /**\1** /g')
 
 # Структура пакета
 
-$(tree -L 3  my_data 2>/dev/null | sed 's/^/    /')
+$(tree -L 3  my_data | sed 's/^/    /')
 
 ## Файл Preinst
 
-$(sed 's/^/    /' my_META/preinst 2>/dev/null)
+$(sed 's/^/    /' my_META/preinst)
 
 ## Файл Postinst
 
-$(sed 's/^/    /' my_META/postinst 2>/dev/null)
+$(sed 's/^/    /' my_META/postinst)
 
 ## Файл Prerm
 
-$(sed 's/^/    /' my_META/prerm 2>/dev/null)
+$(sed 's/^/    /' my_META/prerm)
 
 ## Файл Postrm
 
-$(sed 's/^/    /' my_META/postrm 2>/dev/null)
+$(sed 's/^/    /' my_META/postrm)
 "
 echo "$text">"MARKDOWN.md"
-rm -f "$FILE_NAME"
+rm -rf "$FILE_NAME"
 rm -rf my_data
 rm -rf my_META
 
