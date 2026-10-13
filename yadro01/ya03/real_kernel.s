@@ -1,5 +1,5 @@
 mov bx, message
-call message
+call print
 
 cli
 hlt
@@ -7,4 +7,4 @@ hlt
 %include "print.s"
 
 message:
-        db "I'm real boot loader", 0
+        db "If you gaze\nlong into abyss\nthe abyss will gaze\nback into you =O\n", 0
